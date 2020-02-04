@@ -12,10 +12,26 @@ function findMinAndRemove(array){
    array.splice(minIndex, 1)
    return min
 }
-let array = [3, 2, 4, 5, 6, 7]
-console.log("findMinAndRemove: ", findMinAndRemove(array))
-console.log("array afterward: ", array)
+// Time Complexity / Cost of this function: "n"
 
-function insertionSort(array){
+// Testing out findMinAndRemove()
+// let array = [3, 2, 4, 5, 6, 7]
+// console.log("findMinAndRemove: ", findMinAndRemove(array))
+// console.log("array afterward: ", array)
+// It works! 
 
+function insertionSort(unsorted){
+   let sorted = []
+
+   while (unsorted.length !== 0) {
+      sorted.push(findMinAndRemove(unsorted))
+   } // this while loop adds "n" time complexity on top of findMinAndRemove's time complexity
+
+   return sorted
 }
+// insertionSort fn time complexity is n^2 
+
+// Testing out insertionSort()
+// let unsorted = [12, 10, 9, 14, 1, 3, 5, 11, 6, 15, 16, 13, 2, 4, 8, 7]
+// console.log("Sorted Array: ", insertionSort(unsorted))
+// It works! 
