@@ -18,7 +18,6 @@ describe('#findMinAndRemove', function() {
 
 });
 
-
 describe('#insertionSort', function() {
   it("should sort an unsorted array", function() {
     let unsorted = [12, 10, 9, 14, 1, 3, 5, 11, 6, 15, 16, 13, 2, 4, 8, 7]
