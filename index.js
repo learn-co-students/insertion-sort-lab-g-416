@@ -1,14 +1,22 @@
 function findMinAndRemove(array){
     let min = array[0] 
     let minIndex = 0 
-    for(let i = 0; i < array.length; i++) { 
-        if(array[i] < min) { 
-            min = array[i] 
-            minIndex = i 
+    array.forEach( arr =>  { 
+        if (arr < min) { 
+            min = arr 
+            minIndex = array.indexOf(arr)
         }
-    }
+    })
     array.splice(minIndex, 1)
     return min
+    // for(let i = 0; i < array.length; i++) { 
+//         if(array[i] < min) { 
+//             min = array[i] 
+//             minIndex = i 
+//         }
+//     }
+//     array.splice(minIndex, 1)
+//     return min
 }
 
 function insertionSort(array){
